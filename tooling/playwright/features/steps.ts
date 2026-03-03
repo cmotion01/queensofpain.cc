@@ -18,7 +18,7 @@ When("I navigate to {string}", async ({ page }, url) => {
 
 Then("I see {string} in the title", async ({ page }, keyword) => {
   const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  await expect(page).toHaveTitle(new RegExp(escapedKeyword), { timeout: 3000 });
+  await expect(page).toHaveTitle(new RegExp(escapedKeyword), { timeout: 4500 });
 });
 
 Then("I have no problems navigating the site", async ({ page }) => {

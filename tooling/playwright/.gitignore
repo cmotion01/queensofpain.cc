@@ -1,9 +1,10 @@
 # Playwright and BDD outputs
 /.features-gen/
-/playwright/.cache/
+/.cache/
 /playwright-report/
 /test-results/
 /blob-report/
 
 # Environment files
 .env
+.env.*

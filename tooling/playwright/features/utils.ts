@@ -1,12 +1,12 @@
 export function checkHttpUrl(candidate: string): boolean {
-  let candidateUrl;
   try {
-    candidateUrl = new URL(candidate);
+    const candidateUrl = new URL(candidate);
+
+    return (
+      candidateUrl.protocol === "http:" || candidateUrl.protocol === "https:"
+    );
   } catch (error) {
     console.debug(`Invalid URL format: ${candidate}`, error);
     return false;
   }
-  return (
-    candidateUrl.protocol === "http:" || candidateUrl.protocol === "https:"
-  );
 }
